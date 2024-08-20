@@ -1,0 +1,361 @@
+@media screen and (max-width:768px){
+  
+  
+  .wrap{
+    padding:0 20px; 
+  }
+/*  상단  */
+  header{
+    position: initial;
+    height: auto;
+  }
+  header div.wrap{
+    justify-content: space-between;
+  }
+  header h1{
+    margin-left: 20px;
+  }
+  header h1 a{
+    width: 90px;
+  }
+  header div.wrap ul{
+    display: none
+  }
+  header span{
+    margin-left: 50px;
+  }
+  header span button{
+    width: 90px;
+    font-size: calc(17px * 0.8);
+  }
+  header .ham{
+    display: block;
+    font-size: 0;
+    background-image: url(../img/ham.svg);
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    cursor: pointer;
+  }
+  
+/*  title  */
+  div#title{
+    padding-top: 10px;
+  }
+  div#title div.wrap{
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 50px;
+  }
+  div#title div.title-t{ 
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+  div#title div.title-t::after{
+    
+  width: 100px;
+  height: 100px;
+  right: 40px;
+  }
+  div#title div.title-t h2{
+    font-size: calc(68px * 0.7);
+  }
+  div#title div.title-t h2::before{
+    width: 30px;
+    height: 30px;
+    left: -20px;
+    top: -10px;
+  }
+  div#title div.wrap h2 br{
+    display: block;
+  }
+  div#title div.title-t p{
+    font-size: calc(36px * 0.7);
+  }
+  div#title div.wrap div.titleimg{
+    width: 100%;
+  }
+  div#title div.wrap div.titleimg img{
+    width: 100%;
+  }
+
+
+/*  choice  */
+  #choice .wrap{
+    flex-direction: column;
+  }
+  #choice .wrap .choice-text{
+    padding: 20px;
+    width: 100%;
+  }
+  #choice .wrap .choice-img{
+    display: none;
+  }
+  #choice .wrap h2{
+    font-size: calc(68px * 0.7);
+    text-align: center;
+  }
+  #choice .wrap p{
+    font-size: calc(24px * 0.7);
+    margin: 0 auto;
+  }
+  #choice .wrap p br{
+
+  }
+  #choice .wrap h2::before{
+    top: -30px;
+    left: 72px;
+  }
+  
+  
+/*  menu  */
+  #menu{
+
+  }
+  div.tab{
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom:  20px;
+  }
+  #menu div.wrap{
+    padding-top:60px;
+    padding-bottom: 60px;
+  }
+  #menu div.wrap h2{
+    font-size: calc(58px * 0.6);
+  }
+  #menu div.wrap h2::after{
+    width: 40px;
+    height: 40px;
+  }
+  #menu div.wrap p{
+    font-size: calc(21px * 0.8);
+  }
+  #menu div.wrap div.tab ul.tab-btn{
+    flex-wrap: wrap;
+  }
+  #menu div.wrap div.tab ul.tab-btn li a{
+    font-size: calc(25px * 0.8);
+    padding: 10px 15px;
+  }
+  #menu div.wrap div.tab ul.tab-cont li.slick-slide{
+    background-color: #fff;
+    padding: 50px 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+  }
+  #menu div.wrap div.tab > button{
+    right: calc(50% - 73.5px);
+    top: -7%;
+    background-color: #ff9f24;
+    border-radius: 5px;
+  }
+  #menu div.wrap div.tab ul.tab-cont{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    height: 470px;
+  }
+  #menu div.wrap div.tab ul.tab-cont .slick-list{
+    width: 100%;
+  }
+  #menu div.wrap div.tab ul.tab-cont>li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #menu .slick-next::before{
+    content:'';
+    background-image: url(../img/right.svg);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: inherit;
+    background-repeat: no-repeat;
+    margin-left: 8px;
+  }  
+  #menu .slick-prev::before{
+    content:'';
+    background-image: url(../img/left.svg);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: inherit;
+    background-repeat: no-repeat;
+  } 
+  #menu div.wrap div.tab ul.tab-cont li p{
+    
+  }
+  #menu div.wrap div.tab ul.tab-cont li span{
+    font-size: calc(18px * 0.8);
+  }
+  #menu div.wrap div.tab ul.tab-cont li span br{
+    display: none;
+  }
+  #menu .slick-dots{
+    
+  width: fit-content;
+  left: calc(50% - 45px);
+  }
+  
+  
+  
+/*  point  */
+  #point div.wrap{
+
+  padding-top: 100px;
+  }
+  #point div.wrap h2{
+    font-size: calc(58px * 0.6);   
+  }
+  #point div.wrap p{
+    font-size: calc(18px * 0.8);   
+  }
+  #point div.wrap h3{
+    text-align: center;
+  }
+  #point div.wrap h3 br{
+    display: block;
+  }
+  #point div.wrap > h3::before{
+    display: none;
+  }
+  #point div.wrap > h3::after{
+    display: none;
+  }
+  #point div.wrap ul li{
+    height: 350px;
+    justify-content: center;
+  }
+  #point .slick-prev{
+    
+  left: -30px;
+  }
+  #point .slick-prev::before{
+    
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-image: url(../img/left.svg);
+  background-repeat: no-repeat;
+  }
+  #point .slick-next{
+    
+  right: -30px;
+  }
+  #point .slick-next::before{
+    
+  content: '';
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-image: url(../img/right.svg);
+  background-repeat: no-repeat;
+  }
+  
+/*  문의  */
+  #Franchise{
+    height: initial;
+  }
+  #Franchise div.wrap{
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+   
+    width: initial;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  #Franchise div.wrap h2{
+   font-size: calc(58px * 0.7);
+  }
+  #Franchise div.wrap div.f-img{
+   width: 50%;
+  }
+  #Franchise div.wrap div.f-img img{
+    width: 100%;
+  }
+  #Franchise div.wrap div.inquiry form p{
+    font-size: calc(24px * 0.8);
+  }
+  #Franchise div.wrap div.inquiry form > input{
+  height: 45px;
+  margin-bottom: 25px;
+  width: 90%;
+  }
+  #Franchise div.wrap button{
+    display: block;
+    margin: 0 auto;
+  }
+  
+/*  footer  */
+  footer .wrap{
+    padding-bottom: 30px;
+  }
+  footer div.wrap h1{
+    padding-top:20px;
+    width: 100px;
+  }
+  footer div.wrap ul.sns{
+    top: 20px;
+    right: 20px;
+  }
+  footer div.wrap ul.fnb li a{
+    font-size: calc(17px * 0.8);
+    white-space: nowrap;
+    padding: 10px 10px 10px 0;
+  }
+  footer div.wrap p:nth-of-type(1){
+    font-size: calc(16px * 0.8);
+  }
+  footer div.wrap address{
+    font-size: calc(16px * 0.8);
+  }
+  footer div.wrap ul.info{
+    font-size: calc(16px * 0.8);
+    flex-wrap: wrap;
+  }
+  footer div.wrap p:nth-of-type(2){
+    font-size: calc(16px * 0.8);
+  }
+/*  top  */
+  button.top{
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    font-size: calc(21px * 0.8);
+  }
+  button.top::before{
+    width: 10px;
+    height: 10px;
+  }
+  
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디델리</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="js/jquery-3.7.1.js"></script>
+
+    <!-- 슬릭 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> 
+
+     <script>
+        $(function(){
+            $('.menuAni').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                dots: true,
+                infinite: true,
+                speed: 1500,
+                cssEase: 'ease-out',
+                arrows:false,
+                fade:false,
+                mobileFirst: true,
+                responsive:[
+                    {
+                        breakpoint:768,
+                        settings:'unslick'
+                    }
+                ]
+            });
+            $('.pointAni').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: false,
+                autoplaySpeed: 2000,
+                dots: false,
+                infinite: true,
+                speed: 1500,
+                cssEase: 'ease-out',
+                arrows:true,
+                fade:false,
+                mobileFirst: true,
+                responsive:[
+                    {
+                        breakpoint:768,
+                        settings:'unslick'
+                    }
+                ]
+            });
+
+            $(window).on('resize', function() {
+                $('.menuAni').slick('resize');
+            });
+
+        
+        });
+     </script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+         $(document).ready(function(){
+            AOS.init();
+    });
+    </script>
+
+    <script>
+        $(function(){
+
+            //탭 메뉴
+            $("ul.cont2,ul.cont3,ul.cont4").hide();
+            
+            $("#menu div.wrap div.tab ul.tab-btn li").click(function(){
+               $(this).addClass("active");
+               $("#menu div.wrap div.tab ul.tab-btn li").not(this).removeClass("active");
+               return false;   
+            });
+
+
+            $("#menu div.wrap div.tab ul.tab-btn li").click(function(){
+                var index = $(this).index() + 1; // 클릭된 요소의 인덱스(0부터 시작하므로 +1)
+                $(".cont" + index).show(); // 해당 컨텐츠 보여주기
+                $(".tab-cont").not(".cont" + index).hide(); // 다른 컨텐츠 숨기기
+                $('.menuAni').slick('setPosition'); 
+            });
+
+            $("button.top").click(function(){
+                $("html,body").animate({scrollTop:0},600);
+            });
+
+        });
+    </script>
+
+
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="wrap flex">
+            <h1><a href="" class="block"><img src="img/logo.png" alt="">로고이미지</a></h1>
+            <ul class="menu flex">
+                <li><a href="">BRAND</a></li>
+                <li><a href="">MENU</a></li>
+                <li><a href="">STORE</a></li>
+                <li><a href="">NEWS</a></li>
+                <li><a href="">FRANCHISE</a></li>
+            </ul>
+            <span>
+                <button>점주님 말씀</button>
+                <button>창업문의</button>
+            </span>
+            <button class="ham hide">ham</button>
+        </div>
+    </header>
+
+    <!-- title -->
+    <div id="title">
+        <div class="wrap paddingT100 paddingB100">
+            <div class="title-t" data-aos='fade-right' data-aos-offset="200" data-aos-duration="1000">
+                <h2 class="h1 bold flex">
+                    라볶이전문점 <br>디델리 
+                </h2>
+                <p class="h3">진심이 감동되는 라볶이 공작소!</p>
+            </div>
+            <div class="titleimg" data-aos='fade-left' data-aos-offset="200" data-aos-duration="1000">
+                <img src="img/place2.jpg" alt="">
+                <!-- <img src="img/banner2.jpg" alt="">
+                <img src="img/banner3.jpg" alt=""> -->
+            </div>
+        </div>
+    </div>
+    <!-- main -->
+    <main>
+        <!-- choice -->
+         <section id="choice">
+            <div class="wrap paddingB100 paddingT100">
+                <div class="choice-text" data-aos='fade-right' data-aos-offset="200" data-aos-duration="1000">
+                    <h2 class="h1">디델리를<br>선택해야하는 이유</h2>
+                    <p class="h5">디델리의 라볶이는 흔한 분식 메뉴들 중 한 가지가 아닙니다. <br>
+                        인기 있는 분식인 라면과 떡볶이의 조합을 다년 간 연구해 새롭게 탄생시킨<br>
+                         독창적인 메뉴로 디렐리만의 자부심이자 <br>
+                        고객에게 맛있는 분식을 만들겠다는 고객과의 약속입니다.</p>
+                </div>
+                <div class="choice-img"  data-aos='fade-up' data-aos-offset="200" data-aos-duration="1000">
+                    <span class="block"></span>
+                    <span class="block"></span>
+                    <span class="block"></span>
+                </div>
+            </div>
+         </section>
+        <!-- menu -->
+        <section id="menu">
+            <div class="wrap paddingT100 paddingB50">
+                <div class="menu-t"  data-aos='fade-up' data-aos-offset="200" data-aos-duration="1000">
+                    <h2 class="h2">d.deli menu</h2>
+                    <p class="h5">어디서도 만나보지 못한 다채로운 맛을, 오직 디델리에서</p>
+                </div>
+                <div class="tab"  data-aos='fade-up' data-aos-offset="220" data-aos-duration="1000">
+                    <ul class="tab-btn">
+                        <li class="active"><a href="">라볶이</a></li>
+                        <li><a href="">김밥</a></li>
+                        <li><a href="">사이드</a></li>
+                        <li><a href="">음료</a></li>
+                    </ul>
+                    <button class="h6">메뉴 더보기</button>
+                    <ul class="tab-cont cont1 menuAni">
+                        <li>
+                            <img src="img/menu1.png" alt="">
+                            <p>대파커리 라볶이</p>
+                            <span>향긋한 대파, 매콤 커리로 감칠맛 폭발</span>
+                        </li>
+                        <li>
+                            <img src="img/menu2.png" alt="">
+                            <p>땅콩마라 라볶이</p>
+                            <span>마라맛에 숨어있는 고소함! 중독보장!</span>
+                        </li>
+                        <li>
+                            <img src="img/menu3.png" alt="">
+                            <p>디델리 라볶이</p>
+                            <span>Since 1997, 새콤달콤 <br>디델리 시그니처 라볶이</span>
+                        </li>
+                    </ul>
+                    <ul class="tab-cont cont2 menuAni">
+                        <li>
+                            <img src="img/menugim1.png" alt="">
+                            <p>참치 김밥</p>
+                            <span>담백고소 참치 토핑이 듬뿍</span>
+                        </li>
+                        <li>
+                            <img src="img/menugim2.png" alt="">
+                            <p>와사비 크래미 김밥</p>
+                            <span>톡 쏘는 와사비와 부드러운 크래미가 듬뿍</span>
+                        </li>
+                        <li>
+                            <img src="img/menugim3.png" alt="">
+                            <p>치즈 김밥</p>
+                            <span>고소한 눈꽃치즈와 크림치즈소스가 듬뿍</span>
+                        </li>
+                    </ul>
+                    <ul class="tab-cont cont3 menuAni">
+                        <li>
+                            <img src="img/menuside1.png" alt="">
+                            <p>참치마요밥</p>
+                            <span>고소한 참치와 계란지단이 왕창!</span>
+                        </li>
+                        <li>
+                            <img src="img/menuside2.png" alt="">
+                            <p>[시즌]냉라멘</p>
+                            <span>상큼 깔끔 육수와 쫄깃 탱글 면발!</span>
+                        </li>
+                        <li>
+                            <img src="img/menuside3.png" alt="">
+                            <p>꽃빵튀김(3개)</p>
+                            <span>달콤 고소 그자체!</span>
+                        </li>
+                    </ul>
+                    <ul class="tab-cont cont4 menuAni">
+                        <li>
+                            <img src="img/menudrink1.png" alt="">
+                            <p>자몽 에이드</p>
+                        </li>
+                        <li>
+                            <img src="img/menudrink2.png" alt="">
+                            <p>레몬 에이드</p>
+                        </li>
+                        <li>
+                            <img src="img/menudrink3.png" alt="">
+                            <p>미숫가루</p>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- point1 -->
+         <section id="point">
+            <div class="wrap paddingB100 paddingT100">
+                <h2 class="h2"  data-aos='fade-up' data-aos-offset="200" data-aos-duration="1000">디델리의 창업 경쟁력</h2>
+                <p  data-aos='fade-up' data-aos-offset="200" data-aos-duration="1000">라볶이 전문점 1세대 브랜드가 만든 탄탄하고 철저한 설계 <br>
+                    왜 디델리여야만 하는지 <br>
+                    그 비결을 안내해 드리겠습니다. </p>
+                <h3 class="h4"  data-aos='fade-up' data-aos-offset="200" data-aos-duration="1000">첫 창업을 <br>성공할 수 있는 이유</h3>
+                <ul class="pointAni" data-aos='fade-right' data-aos-offset="200" data-aos-duration="1000">
+                    <li>
+                        <span>핵심경쟁력</span>
+                        <img src="img/point1-1.png" alt="">
+                        <div class="over-t hide">
+                            <p>합리적이고  독창적인 창업 아이템으로 <br>
+                                오픈후에도  안정적인 운영 컨설팅을 <br>
+                                지속적으로 지원합니다. </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>물류/교육시스템</span>
+                        <img src="img/point2-1.png" alt="">
+                        <div class="over-t hide">
+                            <p>초보자도 5일이면 운영 가능! <br>
+                                배달, 서비스, 운영 등 본사가 축적해 놓은 <br>
+                                노하우와 경험을 <br>
+                                체계적인 교육을 통해 제공합니다.  </p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>상권분석</span>
+                        <img src="img/point3-1.png" alt="">
+                        <div class="over-t hide">
+                            <p>A급 상권에 의지하지 않는 디델리 상권 <br>
+                                어느곳에나 잘 어울리는 디델리 입니다.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+         </section>
+        <!-- Franchise -->
+         <section id="Franchise">
+            <div class="wrap paddingT50 paddingB50" data-aos='fade-up' data-aos-offset="100" data-aos-duration="1000">
+                <h2 class="h2">가맹문의</h2>
+                <div class="f-img"><img src="img/franchise.png" alt=""></div>
+                <div class="inquiry">
+                    <form action="">
+                        <p class="h5">이름</p>
+                        <input type="text" placeholder="예) 홍길동">
+                        <p class="h5">연락처</p>
+                        <input type="text" placeholder="예) 010-1234-1234">
+                        <p class="h5">오픈 희망 지역</p>
+                        <input type="text" placeholder="예) 서울">
+                        <div class="agree">
+                            <input type="checkbox"><label for=""><strong>[필수]</strong>개인정보 수집 및 이용에 동의합니다.</label>
+                        </div>
+                    </form>
+                    <button class="h6">문의하기</button>
+                </div>
+            </div>
+         </section>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="wrap paddingB50 paddingT50">
+            <h1><img src="img/logo.png" alt=""></h1>
+            <ul class="sns flex">
+                <li><a href="" class="block">카카오톡</a></li>
+                <li><a href="" class="block">인스타그램</a></li>
+            </ul>
+            <ul class="fnb flex">
+                <li><a href="" class="block">이용약관</a></li>
+                <li><a href="" class="block">개인정보처리방침</a></li>
+                <li><a href="" class="block">이메일무단수집거부</a></li>
+                <li><a href="" class="block">고객센터</a></li>
+            </ul>
+            <p>디델리<br>(주) 디엔에프씨 대표자: 김정수</p>
+            <address>143-912 서울시 동대문구 장한로 37 인경빌딩 5층 (주)디엔에프씨</address>
+            <ul class="info flex">
+                <li>TEL. 02-533-1194</li>
+                <li>FAX. 02-596-6249</li>
+                <li>E-mail. ddeli_official@dnfc.co.kr</li>
+                <li>개인정보보호책임자 : 김정수</li>
+            </ul>
+            <p>COPYRIGHT © 2024 D-deli All Right Reserved</p>
+        </div>
+    </footer>
+
+    <!-- top -->
+     <button class="top h6">TOP</button>
+</body>
+</html>

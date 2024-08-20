@@ -1,0 +1,111 @@
+footer{
+  
+  background-color: #fffceb;
+}
+footer div.wrap{
+  position: relative;
+}
+footer div.wrap h1{
+  width: 130px;
+  height: auto;
+
+}
+footer div.wrap h1 img{
+  width: 100%;
+}
+footer div.wrap ul.sns{
+ position: absolute;
+  right: 0;
+
+ top: 81.44px;
+}
+footer div.wrap ul.sns li{
+  
+}
+footer div.wrap ul.sns li a{
+  font-size: 0;
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+footer div.wrap ul.sns li:first-child a{
+  background-image: url(../img/kakao.png);
+}
+footer div.wrap ul.sns li:last-child a{
+  background-image: url(../img/instar.png);
+  margin-left: 20px;
+}
+footer div.wrap ul.fnb{
+
+  margin-top: 30px;
+}
+footer div.wrap ul.fnb li{
+  
+}
+footer div.wrap ul.fnb li a{
+  font-size: 17px;
+  padding: 10px 60px 10px 0;
+  font-family: 'SBAggroL';
+}
+footer div.wrap p:nth-of-type(1){
+  color: #666;
+  line-height: 1.6
+}
+footer div.wrap address{
+  color: #666;
+  line-height: 1.6
+}
+footer div.wrap ul.info{
+  color: #666;
+  line-height: 1.6;
+  gap: 10px;
+}
+footer div.wrap ul.info li::after{
+  content:"";
+  display: inline-block;
+  height: 13px;
+  width: 1px;
+  background-color: #333;
+  margin-left: 10px;
+}
+footer div.wrap ul.info li:last-child::after{
+  display: none;
+}
+footer div.wrap p:nth-of-type(2){
+  color: #666;
+  line-height: 1.6
+}
+
+/* top */
+body{
+ position: relative;
+}
+button.top{
+  display: block;
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f25d3f; 
+  border-radius: 50%;
+  color: #fff;
+  font-family: 'SBAggroM';
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+button.top::before{
+  content:'';
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  transform: rotate(45deg);
+}

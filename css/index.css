@@ -1,0 +1,525 @@
+/* title */
+div#title{
+  min-height: 800px;
+  height: 100vh;
+}
+div#title div.title-t{
+  width: calc(45% - 100px);
+  margin-left: 100PX;
+  position: relative;
+  margin-top: 150px;
+}
+div#title div.title-t::after{
+  content:'';
+  display: block;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 250px;
+  height: 250px;
+  background-image: url(../img/section4-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes move{
+  0%{
+    transform: rotate(-8deg);
+  }
+  50%{
+    transform: rotate(8deg);
+  }
+  100%{
+    transform: rotate(-8deg);
+  }
+}
+
+div#title div.wrap{ 
+  display: flex;
+  max-width: initial;
+  padding-bottom: 0;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+div#title div.wrap h2{
+  margin-top: 30px;
+  line-height: 1.4;
+  color: #046746;
+  position: relative;
+}
+div#title div.wrap h2 br{
+  display: none;
+}
+div#title div.wrap h2::before{
+  content:'';
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/new2.png);
+  background-size: contain;
+  position: absolute;
+  top: -20px;
+  left: -40px;
+}
+div#title div.wrap p{
+  
+  margin-top: 10px;
+  line-height: 1.4;
+}
+div#title div.wrap div.titleimg{
+  width: 60%;
+}
+div#title div.wrap div.titleimg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* choice */
+#choice{
+  
+  height: 100vh;
+  min-height: 800px;
+}
+#choice .wrap{
+
+  max-width: initial;
+  padding: 0;
+  height: 100%;
+  display: flex;
+}
+#choice .wrap .choice-text{
+  width: 50%;
+  background-color: #046746;
+  color: #fff;
+  padding: 100px;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#choice .wrap h2{
+  margin-bottom: 100px;
+  line-height: 1.3;
+  position: relative;
+}
+#choice .wrap h2::before{
+  content:'';
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/new2.png);
+  background-size: contain;
+  position: absolute;
+  top: -20px;
+  left: -40px;
+}
+#choice .wrap p{
+  color: #fff;
+  line-height: 1.6;
+}
+#choice .wrap .choice-img{
+  display: flex;
+  gap: 50px;
+}
+#choice .wrap .choice-img span{
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+  border-radius: 20px;
+  align-self: center;
+  background-size: contain;
+  background-position: center;
+}
+#choice .wrap .choice-img span:nth-child(1){
+  transform: translate(-120px, -100px);
+  background-image: url(../img/point1-1.jpg);
+}
+#choice .wrap .choice-img span:nth-child(2){
+  transform: translate(-95px, 100px);
+  background-image: url(../img/point1-2.jpg);
+}
+#choice .wrap .choice-img span:nth-child(3){
+ transform: translate(-50px, -100px);
+ background-image: url(../img/point1-3.jpg);
+}
+
+
+
+/* menu */
+#menu {
+
+  height: 100vh;
+  min-height: 900px;
+  background-color: #fffce7d6;
+}
+#menu div.wrap {
+  position: relative;
+}
+#menu .wrap .menu-t{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  margin-bottom: 60px;
+}
+
+#menu div.wrap h2 {
+  text-transform: uppercase;
+  font-family: 'Pretendard-ExtraBold';
+  display: flex;
+  margin-bottom: 20px;
+}
+#menu div.wrap h2::before{
+  content:"";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/section5-2.png);
+  background-size: contain;
+  margin-right: 15px;
+}
+#menu div.wrap h2::after{
+  content:"";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/section5-2.png);
+  background-size: contain;
+  margin-left: 15px;
+}
+#menu div.wrap p {
+  
+}
+#menu div.wrap ul.tag {
+
+}
+#menu div.wrap ul.tag li {
+
+}
+#menu div.wrap div.tab > button{
+  position: absolute;
+  right: 11%;
+  top: 2%;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap:5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#menu div.wrap div.tab>button::after{
+  content:'';
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url(../img/add.svg);
+  background-size: contain;
+  transition: 0.5s;
+}
+#menu div.wrap div.tab > button:hover{
+}
+#menu div.wrap div.tab > button:hover::after{
+  transform: rotate(180deg);
+  margin-left: 10px;
+}
+div.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#menu div.wrap div.tab ul.tab-btn {
+  display: flex;
+  justify-content: center;
+}
+#menu div.wrap div.tab ul.tab-btn::after{
+  
+}
+#menu div.wrap div.tab ul.tab-btn li {
+  
+}
+#menu div.wrap div.tab ul.tab-btn > li a {
+  padding: 15px 25px;
+  font-size: 25px;
+  font-family: 'Pretendard-ExtraBold';
+  display: block;
+}
+#menu div.wrap div.tab ul.tab-btn > li.active a {
+  background-color: #046746; 
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+#menu div.wrap div.tab ul.tab-cont {
+  display: flex;
+  width: 80%;
+  gap: 50px;
+  background-color: #046746;
+  padding: 80px 60px;
+  border-radius: 50px 50px 0 50px;
+  height: 560px;
+  box-sizing: border-box;
+}
+#menu div.wrap div.tab ul.tab-cont:nth-child(1){
+  
+}
+#menu div.wrap div.tab ul.tab-cont > li{
+  width: calc((100% - 150px) / 3);
+  background-color: #fff;
+  padding: 50px 30px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#menu div.wrap div.tab ul.tab-cont li img{
+  width: 100%;
+  margin-bottom: 50px;
+
+}
+#menu div.wrap div.tab ul.cont3 li img{
+  width: 238px; 
+  height: 170px;
+}
+#menu div.wrap div.tab ul.cont4 li{
+
+}
+#menu div.wrap div.tab ul.cont4 li img{
+  width: 40%;
+  display: block;
+}
+
+#menu div.wrap div.tab ul.tab-cont li p{
+  font-family: 'Pretendard-ExtraBold';
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+#menu div.wrap div.tab ul.tab-cont li span{
+  text-align: center;
+  display: block;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+
+
+/* point */
+#point{
+  
+}
+#point div.wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#point div.wrap h2{
+  font-family: 'Pretendard-ExtraBold';
+  margin-bottom: 30px;
+  position: relative;
+}
+#point div.wrap h2::before{
+  content:'';
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/new2.png);
+  background-size: contain;
+  position: absolute;
+  top: -30px;
+  left: -50px;
+}
+#point div.wrap p{
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  font-size: 18px;
+}
+#point div.wrap > h3{
+  font-family: 'Pretendard-ExtraBold';
+  margin-bottom: 80px;
+ position: relative;
+}
+#point div.wrap > h3 br{
+  display: none;
+}
+#point div.wrap > h3::before{
+  content:'';
+  display: block;
+  height: 100px;
+  width: 180%;
+  border-top: 3px solid #f9aa9a;
+  border-radius: 100px 0 0 0;
+  position: absolute;
+  left: -185%;
+  top: 20px;
+}
+#point div.wrap > h3::after{
+  content:'';
+  display: block;
+  height: 100px;
+  width: 180%;
+  border-top: 3px solid #f9aa9a;
+  border-radius: 0 100px 0 0;
+  position: absolute;
+  right: -185%;
+  top: 20px;
+}
+
+#point div.wrap ul{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 85%;
+}
+#point div.wrap ul li{
+ width: calc((100% - 120px)/ 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+ background-color: #f25d3f;
+ padding: 50px 0;
+ position: relative;
+  transition: 0.5s;
+}
+#point div.wrap ul li span{
+  font-size: 35px;
+  font-family: 'Pretendard-ExtraBold';
+  color: #fff;
+}
+#point div.wrap ul li img{
+  display: block;
+  width: 300px;
+}
+#point div.wrap ul li:first-child img{
+  width: 230px;
+}
+#point div.wrap ul li:hover .over-t{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f94239f7;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+#point div.wrap ul li p{
+
+  line-height: 1.6;
+}
+
+
+/* 창업문의 */
+#Franchise{
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#Franchise div.wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  row-gap: 80px;
+  width: 100%;
+}
+#Franchise div.wrap h2{
+  font-family: 'Pretendard-ExtraBold';
+  grid-column: 1 /span 2;
+  grid-row: 1;
+  justify-self: center;
+  position: relative;
+}
+#Franchise div.wrap h2::before{
+  content:'';
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/new2.png);
+  background-size: contain;
+  position: absolute;
+  top: -30px;
+  left: -50px;
+}
+#Franchise div.wrap div.f-img{
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
+  
+  align-self: center;
+}
+#Franchise div.wrap div.f-img img{
+
+}
+#Franchise div.wrap div.inquiry{
+  grid-column: 2;
+  grid-row: 2;
+}
+#Franchise div.wrap div.inquiry form{
+  
+}  
+#Franchise div.wrap div.inquiry form > input{
+  width: 80%;
+  height: 60px;
+  border-radius: 10px;
+  color: rgba(34,34,34,0.5);
+  font-size: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 35px;
+  padding-left:20px;
+  box-sizing: border-box;
+}
+#Franchise div.wrap div.inquiry form p{
+  margin-bottom: 15px;
+  font-family: 'SBAggroL';
+}
+#Franchise div.wrap div.inquiry form div.agree{
+  display: flex;
+  margin-bottom: 35px;
+}
+#Franchise div.wrap div.inquiry form label{
+  display: block;
+  margin-left: 5px;
+}
+#Franchise div.wrap button{
+  padding: 16px 35px;
+  background-image: url(../img/franchise-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ff5b35;
+  cursor: pointer;
+}
+#Franchise div.wrap button:hover{
+  background-image: url(../img/franchise-2-1.png);  
+  color: #fff;
+}
+#Franchise div.wrap button::after{
+  content:'';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #ff5b35;
+  border-right: 2px solid #ff5b35;
+  transform: rotate(-45deg);
+  vertical-align: 1px;
+}
+#Franchise div.wrap button:hover::after{
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
